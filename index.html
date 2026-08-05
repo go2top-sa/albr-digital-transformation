@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+<meta name="author" content="حنين الزكري">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>استراتيجية تكامل المنظومة الرقمية: جمعية البر الأهلية بالرياض | صنّاع التغيير</title>
+<title>منظومة التحول الرقمي المتكاملة: جمعية البر الأهلية بالرياض | صنّاع التغيير</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Sakkal Majalla','Majalla UI','Tajawal','Segoe UI',Arial,sans-serif;direction:rtl;background:#F1F6F8;font-size:14px;color:#1C2C33;min-height:100vh}
 .wrapper{max-width:1200px;margin:0 auto;padding:12px}@media(max-width:768px){.wrapper{padding:6px}}
-.app{display:grid;grid-template-columns:200px 1fr;height:680px;border-radius:12px 12px 0 0;overflow:hidden;border:.5px solid #CFE0E4;border-bottom:none;box-shadow:0 4px 24px rgba(18,58,77,.16)}
+.app{display:grid;grid-template-columns:200px 1fr;height:calc(100vh - 92px);min-height:540px;max-height:980px;border-radius:12px 12px 0 0;overflow:hidden;border:.5px solid #CFE0E4;border-bottom:none;box-shadow:0 4px 24px rgba(18,58,77,.16)}
 .sb{background:#123A4D;display:flex;flex-direction:column;overflow:hidden;overflow-y:auto}
 .sb-logo{padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.09);flex-shrink:0}
 .sb-t{color:#fff;font-size:14px;font-weight:700}.sb-t em{color:#C3A363;font-style:normal}
@@ -217,6 +218,372 @@ table.ft tr:hover td{background:#F6FBFC}
 
 /* ── Mobile hamburger + drawer ── */
 
+}
+.ft-credit{display:block!important;width:100%!important;box-sizing:border-box;margin:6px 0 0!important;padding:11px 14px 15px!important;text-align:center!important;border-top:.5px solid rgba(255,255,255,.045)}
+.ft-credit-in{display:table!important;margin:0 auto!important;direction:ltr!important;unicode-bidi:isolate;text-align:center;font-family:'Cormorant Garamond','Palatino Linotype','Book Antiqua',Palatino,Georgia,serif!important;font-style:italic;font-weight:400;font-size:9px!important;letter-spacing:2.4px;color:#A9BEC7!important;line-height:1.5;white-space:nowrap}
+
+/* ===================== صقل الاستجابة: جوال · لوحي · لابتوب ===================== */
+body{overflow-wrap:break-word}
+img,svg,canvas,table{max-width:100%}
+@media(min-width:769px) and (max-width:1024px){
+  .wrapper{max-width:100%;padding:10px}
+  .app{grid-template-columns:186px 1fr}
+}
+@media(max-width:768px){
+  .wrapper{max-width:100%}
+}
+@media(min-width:769px) and (max-width:900px){
+  .app{min-height:520px}
+}
+@media(max-width:900px){
+  .map-svg{min-height:320px}
+}
+@media(max-width:768px){
+  .app{grid-template-columns:1fr!important;height:auto!important}
+  .sb{display:none!important}
+  .main{width:100%;min-width:0}
+  .wrapper{padding:6px}
+  .ct{padding:10px;max-height:none}
+  .kc .kv{font-size:16px}
+  .kc .kl{font-size:9px}
+  .ch{font-size:11.5px}
+  .cw{min-height:200px}
+  .ft{font-size:10.5px}
+  .ft th,.ft td{white-space:nowrap}
+  .drawer-ni{min-height:42px}
+  .slb,.fbtn,.tbtn{min-height:40px}
+  .cf input,.cf select{min-height:42px;font-size:13px}
+  .tb-t{font-size:13px}
+  .tb-r{gap:6px;flex-wrap:wrap}
+  .srcb{font-size:9px;padding:2px 7px}
+  .upd{display:none}
+}
+@media(max-width:480px){
+  .kg,.kg6{grid-template-columns:1fr}
+  .exec,.ph,.bdg,.lnk,.dgrid,.calc{grid-template-columns:1fr}
+  .kc .kv{font-size:18px}
+  .ct{padding:8px}
+  .card{border-radius:8px}
+  .cw{min-height:180px}
+  .stepper .step{min-width:100%}
+  .mp-info{padding:9px}
+}
+@media(hover:none){
+  .ni:hover,.slb:hover,.fbtn:hover{background:inherit}
+}
+</style>
+<style>
+/* ===================== بيان مصادر البيانات ===================== */
+.lvl{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+@media(max-width:900px){.lvl{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.lvl{grid-template-columns:1fr}}
+.lvc{background:#fff;border:.5px solid #CFE0E4;border-radius:8px;padding:11px 12px;border-top:3px solid #8FA3AB}
+.lvc.real{border-top-color:#1A7A4A}.lvc.goal{border-top-color:#C3A363}
+.lvc.est{border-top-color:#0F8A9C}.lvc.sim{border-top-color:#B4553F}
+.lvc-b{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 9px;border-radius:20px;color:#fff;margin-bottom:6px}
+.lvc.real .lvc-b{background:#1A7A4A}.lvc.goal .lvc-b{background:#C3A363}
+.lvc.est .lvc-b{background:#0F8A9C}.lvc.sim .lvc-b{background:#B4553F}
+.lvc-t{font-size:12px;font-weight:700;color:#123A4D;line-height:1.5;margin-bottom:4px}
+.lvc-d{font-size:10px;color:#5E7A85;line-height:1.6}
+.lvc-e{font-size:10px;color:#1C2C33;line-height:1.65;margin-top:7px;padding-top:7px;border-top:.5px solid #EDF2F3}
+</style>
+<style id="rq-css">
+/* ===================== لوحة تحليل الأرقام المعلنة (نطاق #rq) ===================== */
+
+#rq{
+  --ink:#16232B; --ink-2:#3D5361; --paper:#FBFAF7; --card:#FFFFFF;
+  --rule:#E3DED1; --sand:#F0EBDF;
+  --green:#1F6B4F; --green-l:#3E9A76; --gold:#A8792C; --clay:#9C4A34; --slate:#5A7284;
+  --r:3px;
+}
+#rq *{box-sizing:border-box}
+#rq{scroll-behavior:smooth}
+#rq{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Sakkal Majalla","Majalla UI","IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif;
+  font-weight:400; line-height:1.8; font-size:16px;
+}
+#rq h1, #rq h2, #rq h3, #rq .disp{font-family:"Sakkal Majalla","Majalla UI","Noto Kufi Arabic",system-ui,sans-serif;font-weight:800;letter-spacing:-.01em}
+#rq .num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;direction:ltr;display:inline-block}
+#rq .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+
+#rq .top{border-bottom:1px solid var(--rule);background:var(--card);position:sticky;top:0;z-index:40}
+#rq .top .wrap{display:flex;align-items:center;gap:14px;min-height:54px;padding:9px 0;flex-wrap:wrap}
+#rq .brand{font-family:"Sakkal Majalla","Majalla UI","Noto Kufi Arabic";font-weight:800;font-size:14px}
+#rq .brand span{color:var(--green)}
+#rq .top nav{margin-inline-start:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+#rq .top button.nbtn{font-family:inherit;font-size:11.5px;color:#2D3E50;background:#fff;border:1px solid #CFE0E4;
+  padding:5px 12px;border-radius:20px;cursor:pointer;transition:.14s;white-space:nowrap}
+#rq button.nbtn:hover{background:#EAF5F7;border-color:#A7D2DA}
+#rq button.nbtn:focus-visible{outline:2px solid #0F8A9C;outline-offset:2px}
+#rq button.nbtn.on{background:#2D3E50;border-color:#2D3E50;color:#fff;font-weight:600}
+#rq .top nav a:hover{background:var(--sand);color:var(--ink)}
+#rq .top nav a:focus-visible, #rq button:focus-visible, #rq select:focus-visible, #rq input:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+
+#rq .hero{padding:52px 0 34px;border-bottom:1px solid var(--rule)}
+#rq .eyebrow{font-size:11.5px;letter-spacing:.18em;color:var(--gold);font-weight:600;margin:0 0 14px}
+#rq .hero h1{font-size:clamp(26px,4vw,42px);line-height:1.3;margin:0 0 18px;max-width:22ch}
+#rq .hero p.lede{font-size:17px;color:var(--ink-2);max-width:64ch;margin:0 0 34px;font-weight:300}
+#rq .hero p.lede b{font-weight:600;color:var(--ink)}
+
+
+#rq .strip-wrap{margin-top:8px}
+#rq .strip-label{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-2);margin-bottom:7px}
+#rq .strip{display:flex;height:56px;width:100%;border:1px solid var(--rule);background:var(--card);overflow:hidden;border-radius:var(--r)}
+#rq .seg{position:relative;border-inline-start:1px solid rgba(255,255,255,.85);transition:filter .18s}
+#rq .seg:first-child{border:0}
+#rq .seg:hover{filter:brightness(1.18)}
+#rq .strip-caption{font-size:12.5px;color:var(--ink-2);margin-top:10px;max-width:70ch}
+#rq .strip-caption b{color:var(--clay);font-weight:600}
+#rq #segTip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;font-size:12px;padding:6px 10px;border-radius:var(--r);opacity:0;transition:opacity .12s;z-index:60;white-space:nowrap}
+
+
+#rq .rail{position:sticky;top:var(--hdr,72px);z-index:30;background:var(--sand);border-bottom:1px solid var(--rule);padding:12px 0}
+#rq .rail .wrap{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}
+#rq .fld{display:flex;flex-direction:column;gap:4px}
+#rq .fld label{font-size:11px;color:var(--ink-2);font-weight:500}
+#rq select, #rq input[type=search]{
+  font-family:inherit;font-size:13px;padding:7px 10px;border:1px solid var(--rule);
+  background:var(--card);color:var(--ink);border-radius:var(--r);min-width:150px
+}
+#rq .rail button{
+  font-family:inherit;font-size:12.5px;padding:8px 14px;border:1px solid var(--ink);
+  background:var(--ink);color:#fff;border-radius:var(--r);cursor:pointer
+}
+#rq .rail button.ghost{background:transparent;color:var(--ink)}
+#rq .rail .count{font-size:12px;color:var(--ink-2);margin-inline-start:auto}
+#rq .rail .count b{font-family:"IBM Plex Mono";color:var(--green)}
+
+
+#rq section{padding:48px 0;border-bottom:1px solid var(--rule)}
+#rq .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+#rq .tag{font-family:"IBM Plex Mono";font-size:11px;color:#fff;background:var(--green);padding:3px 8px;border-radius:var(--r)}
+#rq .tag.alt{background:var(--gold)} #rq .tag.n{background:var(--slate)}
+#rq .sec-head h2{font-size:22px;margin:0}
+#rq .sec-sub{color:var(--ink-2);font-size:14px;margin:0 0 26px;max-width:78ch;font-weight:300}
+
+#rq .grid{display:grid;gap:18px}
+#rq .g2{grid-template-columns:1.35fr .95fr}
+#rq .g3{grid-template-columns:repeat(3,1fr)}
+#rq .g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){#rq .g2, #rq .g3, #rq .g4{grid-template-columns:1fr}}
+
+#rq .card{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:18px}
+#rq .card h3{font-size:14px;margin:0 0 14px;font-weight:600;font-family:"Sakkal Majalla","Majalla UI","IBM Plex Sans Arabic"}
+#rq .chartbox{position:relative;height:300px}
+#rq .chartbox.tall{height:360px}
+
+#rq .stat{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:14px 16px}
+#rq .stat .k{font-size:11.5px;color:var(--ink-2);margin-bottom:6px}
+#rq .stat .v{font-family:"IBM Plex Mono";font-size:23px;font-weight:500;color:var(--ink)}
+#rq .stat .v small{font-size:12px;color:var(--ink-2);font-family:"Sakkal Majalla","Majalla UI","IBM Plex Sans Arabic"}
+#rq .stat .d{font-size:11.5px;margin-top:5px}
+#rq .up{color:var(--green)} #rq .down{color:var(--clay)}
+
+
+#rq .finding{border-inline-start:3px solid var(--green);padding:12px 16px;background:var(--card);border-radius:var(--r);margin-top:18px;border-block:1px solid var(--rule);border-inline-end:1px solid var(--rule)}
+#rq .finding .lab{font-size:11px;letter-spacing:.12em;color:var(--green);font-weight:600;margin-bottom:5px}
+#rq .finding p{margin:0;font-size:14px}
+#rq .finding.link{border-inline-start-color:var(--gold)}
+#rq .finding.link .lab{color:var(--gold)}
+#rq .finding.warn{border-inline-start-color:var(--clay)}
+#rq .finding.warn .lab{color:var(--clay)}
+
+
+#rq .ledger{width:100%;border-collapse:collapse;font-size:13px}
+#rq .ledger th{
+  text-align:right;font-size:11.5px;font-weight:600;color:var(--ink-2);
+  border-bottom:1px solid var(--ink);padding:9px 8px;position:sticky;top:0;background:var(--card)
+}
+#rq .ledger td{padding:8px;border-bottom:1px solid var(--rule)}
+#rq .ledger td.n{font-family:"IBM Plex Mono";text-align:left;direction:ltr}
+#rq .ledger tbody tr:hover{background:var(--sand)}
+#rq .scroll{max-height:460px;overflow:auto;border:1px solid var(--rule);border-radius:var(--r);background:var(--card)}
+#rq .pill{font-size:11px;padding:2px 7px;border-radius:20px;border:1px solid var(--rule);color:var(--ink-2)}
+#rq .pill.ok{border-color:var(--green-l);color:var(--green)}
+#rq .pill.mid{border-color:var(--gold);color:var(--gold)}
+#rq .pill.low{border-color:var(--clay);color:var(--clay)}
+#rq .empty{padding:40px;text-align:center;color:var(--ink-2);font-size:14px}
+
+#rq footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-2)}
+#rq footer b{color:var(--ink)}
+#rq .src{margin:6px 0 0;padding:0;list-style:none}
+#rq .src li{padding:3px 0}
+@media print{
+  #rq .rail, #rq .top nav, #rq .rail button{display:none}
+  #rq section{page-break-inside:avoid;border:0}
+  #rq{background:#fff}
+}
+@media (prefers-reduced-motion:reduce){#rq *{transition:none!important;animation:none!important}}
+#rq .ft-credit{text-align:center;padding:10px 0 14px;font-size:9.5px;letter-spacing:1px;color:#9BAFB6;font-weight:400}
+
+#rq button.tbtn{font-family:inherit;font-size:11.5px;padding:6px 13px;border-radius:7px;border:1px solid #CFE0E4;
+  background:#fff;color:#123A4D;cursor:pointer;transition:.14s;white-space:nowrap;margin-inline-start:6px}
+#rq button.tbtn:hover{background:#EAF5F7;border-color:#A7D2DA}
+#rq button.tbtn:focus-visible{outline:2px solid #0F8A9C;outline-offset:2px}
+#rq .fchips{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#5E7A85;margin-inline-start:10px}
+#rq .fchip{background:#EAF5F7;border:.5px solid #A7D2DA;color:#0B6B7A;border-radius:20px;padding:2px 9px;font-size:10px}
+#rq .fnote{font-size:11px;color:#5E7A85;background:#FDF6E8;border:.5px solid #E6D2A8;border-radius:7px;
+  padding:7px 11px;margin-top:9px;line-height:1.65}
+#rq .ledger thead th{position:sticky;top:0;z-index:3}
+#rq .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#123A4D;color:#fff;
+  font-size:12px;padding:9px 18px;border-radius:8px;z-index:200;opacity:0;transition:opacity .25s;pointer-events:none}
+#rq .toast.on{opacity:.96}
+#rq .cdnwarn{background:#FEF2F2;color:#991B1B;border:1px solid #FECACA;border-radius:7px;
+  padding:8px 12px;font-size:12px;margin:10px 0;text-align:center}
+@media print{
+  #rq .rail, #rq .tbtn, #rq .fchips, #rq .toast, #rq .cdnwarn{display:none!important}
+  #rq{background:#fff}
+  #rq section, #rq .card, #rq .stat{break-inside:avoid;page-break-inside:avoid}
+  #rq .ledger thead th{position:static}
+}
+
+
+#rq{--hdr:72px}
+#rq{-webkit-text-size-adjust:100%}
+#rq img, #rq svg, #rq canvas, #rq table{max-width:100%}
+#rq .scroll{max-height:460px}
+#rq .strip>div{min-width:0}
+#rq *, #rq *::before, #rq *::after{box-sizing:border-box}
+#rq nav::-webkit-scrollbar{height:0}
+#rq nav{scrollbar-width:none}
+
+
+@media(max-width:1200px){
+  #rq .wrap{padding:0 18px}
+  #rq .g2{grid-template-columns:1.2fr 1fr}
+  #rq .grid{gap:15px}
+}
+
+@media(max-width:900px){
+  #rq .g2, #rq .g3, #rq .g4{grid-template-columns:1fr}
+  #rq .chartbox{height:290px}
+  #rq .chartbox.tall{height:330px}
+  #rq .grid{gap:14px}
+  #rq .lede{font-size:15.5px}
+  #rq .sec-sub{font-size:13.5px}
+  #rq nav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px}
+  #rq button.nbtn{flex:0 0 auto}
+}
+
+@media(max-width:640px){
+  #rq .wrap{padding:0 14px}
+  #rq .top .wrap{gap:8px;padding:8px 0}
+  #rq .brand{font-size:13px;width:100%;line-height:1.4}
+  #rq nav{margin-inline-start:0;width:100%;gap:5px}
+  #rq button.nbtn{font-size:11px;padding:5px 10px}
+  #rq .rail{position:static;padding:11px 0}
+  #rq .rail .wrap{gap:9px;align-items:stretch}
+  #rq .fld{flex:1 1 46%;min-width:0}
+  #rq .fld select, #rq .fld input{width:100%;box-sizing:border-box;min-width:0}
+  #rq .fld label{font-size:10.5px}
+  #rq button.ghost, #rq button.tbtn{font-size:11px;padding:7px 11px;margin:0;flex:1 1 46%}
+  #rq .fchips, #rq .count, #rq .fnote{flex:1 1 100%;margin-inline-start:0}
+  #rq .count{font-size:11.5px}
+  #rq .fnote{font-size:10.5px}
+  #rq .chartbox{height:245px}
+  #rq .chartbox.tall{height:275px}
+  #rq .card{padding:13px}
+  #rq .card h3{font-size:13px;margin-bottom:11px}
+  #rq .stat{padding:11px 12px}
+  #rq .stat .v{font-size:19px}
+  #rq .stat .k{font-size:10.5px}
+  #rq .ledger{font-size:11px}
+  #rq .ledger th{font-size:10px;padding:7px 6px}
+  #rq .ledger td{padding:6px}
+  #rq .strip{height:46px}
+  #rq .scroll{max-height:360px}
+  #rq nav{flex-wrap:nowrap;overflow-x:auto}
+  #rq .hero h1{max-width:none;font-size:clamp(22px,6.4vw,30px);margin-bottom:14px}
+  #rq .lede{font-size:14px;max-width:none;margin-bottom:22px}
+  #rq .sec-sub{font-size:12.5px;max-width:none;margin-bottom:18px}
+  #rq .sec-head h2{font-size:19px}
+  #rq section{padding:26px 0}
+  #rq .strip-label, #rq .strip-caption{font-size:10.5px}
+  #rq .toast{font-size:11.5px;padding:8px 14px;width:max-content;max-width:86vw}
+}
+
+@media(max-width:420px){
+  #rq .wrap{padding:0 11px}
+  #rq button.nbtn{font-size:10.5px;padding:5px 9px}
+  #rq .fld{flex:1 1 100%}
+  #rq button.ghost, #rq button.tbtn{flex:1 1 100%}
+  #rq .stat .v{font-size:17px}
+  #rq .chartbox{height:215px}
+  #rq .chartbox.tall{height:245px}
+  #rq .ledger{font-size:10.5px}
+}
+
+@media(min-width:1600px){
+  #rq .wrap{max-width:1320px}
+  #rq .chartbox{height:330px}
+  #rq .chartbox.tall{height:390px}
+}
+
+
+#rq{overflow-wrap:break-word}
+@media(max-width:900px){
+  #rq button.nbtn{min-height:36px}
+}
+@media(max-width:640px){
+  #rq button, #rq .ghost, #rq button.tbtn{min-height:42px}
+  #rq .fld select, #rq .fld input{min-height:42px;font-size:13px}
+  #rq button.nbtn{min-height:38px}
+  #rq .ledger th, #rq .ledger td{white-space:nowrap}
+}
+@media(hover:none){
+  #rq button.nbtn:hover{background:#fff}
+}
+
+#rq{background:#FAF8F3;color:#1A1A1A;font-size:14px;line-height:1.6;display:block;margin:-10px -12px 0;padding:0 0 8px}
+#rq .top{border-radius:0}
+#rq .wrap{max-width:100%;padding:0 16px}
+#rq section{padding:26px 0}
+#rq .rq-toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#123A4D;color:#fff;
+  font-size:12px;padding:9px 18px;border-radius:8px;z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none}
+#rq .rq-toast.on{opacity:.96}
+@media(max-width:768px){#rq{margin:-8px -10px 0}#rq .wrap{padding:0 12px}}
+
+
+/* ===== ضبط مقاسات شاشة التحليلات داخل جزء المحتوى ===== */
+#rq{margin:0!important;padding:0 0 8px!important}
+#rq .wrap{max-width:100%!important;padding:0 12px!important}
+#rq section{padding:14px 0!important}
+#rq .top{position:static!important;border-radius:0}
+#rq .top .wrap{min-height:0!important;padding:7px 0!important;gap:8px}
+#rq .brand{font-size:12px!important;width:auto!important}
+#rq .top button.nbtn{font-size:10.5px!important;padding:4px 10px!important;min-height:0!important}
+#rq .rail{position:static!important;padding:8px 0!important}
+#rq .rail .wrap{gap:8px!important}
+#rq .rail select,#rq .rail input{font-size:11.5px!important;padding:5px 8px!important;min-height:0!important}
+#rq .rail label{font-size:10px!important}
+#rq button.tbtn,#rq .rail button{font-size:10.5px!important;padding:5px 10px!important;min-height:0!important}
+#rq .hero{padding-top:10px!important}
+#rq .hero h1{font-size:20px!important;line-height:1.45!important;margin:0 0 8px!important;max-width:none!important}
+#rq .lede{font-size:12.5px!important;margin-bottom:12px!important;max-width:none!important}
+#rq .sec-head h2{font-size:16px!important}
+#rq .sec-sub{font-size:11.5px!important;margin-bottom:10px!important;max-width:none!important}
+#rq .card{padding:11px!important}
+#rq .card h3{font-size:12px!important;margin:0 0 8px!important}
+#rq .chartbox{height:205px!important}
+#rq .chartbox.tall{height:245px!important}
+#rq .scroll{max-height:255px!important}
+#rq .strip{height:40px!important}
+#rq .strip-label,#rq .strip-caption,#rq .fnote,#rq .fchips{font-size:10.5px!important}
+#rq .stat{padding:9px 10px!important}
+#rq .stat .v{font-size:16px!important}
+#rq .stat .k{font-size:10px!important}
+#rq .ledger{font-size:10.5px!important}
+#rq .ledger th,#rq .ledger td{padding:5px 6px!important}
+#rq .grid{gap:10px!important}
+#rq .toast,#rq .rq-toast{bottom:12px}
+@media(max-width:768px){
+  #rq .chartbox{height:195px!important}
+  #rq .chartbox.tall{height:225px!important}
+  #rq .scroll{max-height:235px!important}
+  #rq .hero h1{font-size:18px!important}
 }
 </style>
 <style id="stats-css">
@@ -428,9 +795,26 @@ table.ft tr:hover td{background:#F6FBFC}
   border-radius:8px;padding:8px 11px;margin-bottom:8px}
 .brf-banner b{color:#8A6A22;font-size:11.5px}
 .brf-banner span{font-size:10.5px;color:#5E7A85}
+
+/* ===== تدفّق طبيعي كامل على الجوال واللوحي: لا انهيار في ارتفاع منطقة المحتوى ===== */
+@media(max-width:768px){
+  .app{height:auto!important;min-height:0!important;max-height:none!important;
+       overflow:visible!important;border-radius:0!important;box-shadow:none!important}
+  .main{overflow:visible!important;height:auto!important;display:block!important}
+  .ct{overflow:visible!important;overflow-y:visible!important;height:auto!important;
+      max-height:none!important;flex:none!important;padding:10px!important}
+  .sc.on{display:block!important;height:auto!important;overflow:visible!important}
+  #rq{height:auto!important;overflow:visible!important}
+  #rq .scroll{max-height:320px!important}
+}
+@media(min-width:769px){
+  .ct{min-height:0}
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -445,6 +829,7 @@ table.ft tr:hover td{background:#F6FBFC}
   <div class="ns">الرئيسية</div>
   <div class="ni on" onclick="go('home')"><i>▦</i>لوحة القيادة</div>
   <div class="ni" onclick="go('brief')"><i>☀</i>الموجز الصباحي<span class="nb">2</span></div>
+  <div class="ni" onclick="go('decl')"><i>⚑</i>بيان مصادر البيانات</div>
   <div class="ni" onclick="go('pipe')"><i>⊡</i>طلبات المستفيدين<span class="nb">38</span></div>
   <div class="sb-sec"><div class="sb-sec-l">تنفيذ الاستراتيجية</div></div>
   <div class="ni" onclick="go('road')"><i>▭</i>خارطة الطريق</div>
@@ -466,6 +851,8 @@ table.ft tr:hover td{background:#F6FBFC}
   <div class="ni" onclick="go('roi')"><i>≈</i>حاسبة العائد</div>
   <div class="ni" onclick="go('kpi')"><i>◐</i>مؤشرات الأداء KPIs</div>
   <div class="ni" onclick="go('qw')"><i>⚡</i>الأثر المبكر</div>
+  <div class="sb-sec"><div class="sb-sec-l">تحليل الأرقام المعلنة</div></div>
+  <div class="ni" onclick="go('real')"><i>⌗</i>التحليلات السبعة</div>
   <div class="sb-sec"><div class="sb-sec-l">التحليل الإحصائي ودعم القرار</div></div>
   <div class="ni" onclick="go('stats')"><i>▤</i>لوحة التحليل الإحصائي</div>
   <div class="ni" onclick="go('gmap')"><i>⌖</i>خريطة فروع الرياض</div>
@@ -887,6 +1274,203 @@ table.ft tr:hover td{background:#F6FBFC}
       </div>
     </div>
 
+    <div class="sc" id="s-real">
+<div id="rq">
+
+<div class="top"><div class="wrap">
+  <div class="brand">ملحق التحليل الإحصائي · <span>جمعية البر الأهلية بالرياض</span></div>
+  <nav id="mainNav" aria-label="التنقل بين التحليلات"><button type="button" class="nbtn" data-go="s1">التحليل الوصفي</button><button type="button" class="nbtn" data-go="s2">تحليل التركّز</button><button type="button" class="nbtn" data-go="s3">تحليل النمو</button><button type="button" class="nbtn" data-go="s4">تحليل الكفاءة</button><button type="button" class="nbtn" data-go="s5">تحليل التركيبة</button><button type="button" class="nbtn" data-go="s6">تحليل الارتباط</button><button type="button" class="nbtn" data-go="s7">القيم الشاذة</button><button type="button" class="nbtn" data-go="s8">الفجوة الرقمية</button><button type="button" class="nbtn" data-go="data">جدول البيانات</button></nav>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">مجموعة صناع التغيير · الدبلوم المهني في التحول الرقمي · ١٤٤٧هـ</p>
+  <h1>سبعة تحليلات إحصائية تشرح لماذا يحتاج البر إلى طبقة تكامل</h1>
+  <p class="lede">
+    كل رقم في هذه اللوحة مستخرج من التقارير السنوية الرسمية المنشورة للجمعية.
+    ما لم نستطع استخراجه، وهو كثير، هو نفسه الدليل:
+    <b>تقارير أعوام ٢٠١٩ إلى ٢٠٢٢ و٢٠٢٤ منشورة كصور ممسوحة لا تقرؤها الآلة</b>،
+    فتعذّر بناء سلسلة زمنية متصلة عن جمعية عمرها سبعون عاماً.
+  </p>
+
+  <div class="strip-wrap">
+    <div class="strip-label"><span>توزيع الإنفاق البرامجي ٢٠٢٣م، ٢٢ بنداً، ٧٤٫٩ مليون ريال</span><span>تمرير المؤشر على أي شريحة يُظهر بيانها</span></div>
+    <div class="strip" id="strip"></div>
+    <p class="strip-caption">
+      كل شريحة بند إنفاق واحد، وعرضها يساوي حصتها. <b>بند واحد يبتلع ٥٧٪ من العرض</b> ·
+      هذه هي صورة التركّز التي يستحيل رؤيتها في جدول Excel، وهي أول ما تُظهره لوحة موحّدة.
+    </p>
+  </div>
+</div></div>
+
+<div class="rail"><div class="wrap">
+  <div class="fld"><label for="fYear">السنة</label>
+    <select id="fYear"><option value="">كل السنوات</option></select></div>
+  <div class="fld"><label for="fDomain">المجال</label>
+    <select id="fDomain"><option value="">كل المجالات</option></select></div>
+  <div class="fld"><label for="fSub">الفئة الفرعية</label>
+    <select id="fSub"><option value="">كل الفئات</option></select></div>
+  <div class="fld"><label for="fConf">درجة الثقة</label>
+    <select id="fConf"><option value="">الكل</option></select></div>
+  <div class="fld"><label for="fQ">بحث في البنود</label>
+    <input type="search" id="fQ" placeholder="مثال: زكاة"></div>
+  <button class="ghost" id="reset">إعادة الضبط</button><button class="tbtn" id="showAll">إظهار كل السجلات</button><button class="tbtn" id="expCsv">تصدير الجدول</button><button class="tbtn" id="prnt">طباعة</button><span class="fchips" id="fchips"></span>
+  <div class="count">المعروض الآن: <b id="cnt">0</b> سجلاً من <b id="tot">0</b></div><div class="fnote" id="fscope">نطاق التصفية: تُطبَّق الفلاتر على جدول البيانات وعلى التحليل الوصفي وتحليل التركّز. أما تحليلات النمو والكفاءة والتركيبة والارتباط والقيم الشاذة والفجوة الرقمية فتُحسب على مجموعة البيانات الكاملة لأن معناها الإحصائي يقوم على مقارنة عامَي ٢٠٢٣ و٢٠٢٥ كاملين.</div>
+</div></div>
+
+<!-- 1 وصفي -->
+<section id="s1"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ١</span><h2>التحليل الوصفي</h2></div>
+  <p class="sec-sub">مقاييس النزعة المركزية والتشتت لمبالغ ٢٢ بنداً من برامج ومشاريع عام ٢٠٢٣م. المقاييس أدناه تُحسب من البنود المطابقة للفلاتر أعلاه.</p>
+  <div class="grid g4" id="descCards"></div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>مبالغ البنود مرتّبة تنازلياً</h3><div class="chartbox tall"><canvas id="cDesc"></canvas></div></div>
+    <div class="card"><h3>موقع المتوسط من الوسيط</h3><div class="chartbox tall"><canvas id="cBox"></canvas></div></div>
+  </div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fDesc"></p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>توزيع بهذا الالتواء يجعل أي تقرير يعتمد المتوسط وحده مضلّلاً للقيادة. لوحة Power BI الموحّدة (المبادرة ٥) تعرض التوزيع لا الرقم الواحد، وهو الفرق بين «متوسط الإنفاق على البرنامج ٣٫٤ مليون» و«برنامج واحد يستحوذ على ٤٣ مليوناً».</p></div>
+</div></section>
+
+<!-- 2 تركّز -->
+<section id="s2"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٢</span><h2>تحليل التركّز والتوزيع</h2><span class="pill">باريتو · HHI · جيني</span></div>
+  <p class="sec-sub">هل يتوزّع الإنفاق بالتساوي على البرامج أم يتركّز في قلّة منها؟ ثلاثة مقاييس مستقلة تجيب على السؤال نفسه.</p>
+  <div class="grid g4" id="concCards"></div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>منحنى باريتو: المبلغ والحصة التراكمية</h3><div class="chartbox tall"><canvas id="cPareto"></canvas></div></div>
+    <div class="card"><h3>منحنى لورنز ومعامل جيني</h3><div class="chartbox tall"><canvas id="cLorenz"></canvas></div></div>
+  </div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fConc"></p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>التركّز نعمة تشغيلية: أتمتة عدد محدود من المسارات تغطي معظم الحركة المالية. هذا يدعم مبدأ «الربط يسبق البناء» في المرحلة الخامسة، ويقترح ترتيب الأتمتة تنازلياً بحسب الحصة لا بحسب سهولة التنفيذ.</p></div>
+</div></section>
+
+<!-- 3 نمو -->
+<section id="s3"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٣</span><h2>التحليل الزمني ومعدلات النمو</h2></div>
+  <p class="sec-sub">ثلاثة عشر مؤشراً تشغيلياً بين ٢٠٢٣م و٢٠٢٥م، مع معدل النمو السنوي المركّب (CAGR) وإسقاط ٢٠٢٧م بافتراض ثبات المعدل.</p>
+  <div class="grid g4" id="growthCards"></div>
+  <div class="card" style="margin-top:18px"><h3>معدل النمو السنوي المركّب لكل مؤشر</h3><div class="chartbox tall"><canvas id="cGrowth"></canvas></div></div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fGrowth"></p></div>
+  <div class="finding warn"><div class="lab">تحفّظ منهجي</div><p>نقطتان زمنيتان لا تُثبتان اتجاهاً إحصائياً؛ ما ورد أعلاه مؤشرات توجّه لا تنبؤات معتمدة. وسبب الاقتصار على نقطتين هو أن باقي التقارير غير قابلة للاستخراج الآلي، وهو أثر مباشر لغياب مستودع البيانات المركزي.</p></div>
+</div></section>
+
+<!-- 4 كفاءة -->
+<section id="s4"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٤</span><h2>تحليل النسب والكفاءة التشغيلية</h2></div>
+  <p class="sec-sub">تحويل الأرقام المطلقة إلى نسب قابلة للمقارنة عبر السنوات، وهي خط الأساس الكمي الذي يقوم عليه مقياس العائد الاجتماعي SROI المستهدف في الخطة.</p>
+  <div class="grid g2">
+    <div class="card"><h3>نسب الكفاءة: ٢٠٢٣ مقابل ٢٠٢٥</h3><div class="chartbox tall"><canvas id="cEff"></canvas></div></div>
+    <div class="card"><h3>مؤشرات ٢٠٢٣ المفردة</h3><div class="grid" id="effCards" style="gap:12px"></div></div>
+  </div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fEff"></p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>مصادر هذه النسب موزّعة اليوم على بوابة المستفيدين ونظام Odoo ومنصة جود وملفات Excel في الفروع، فلا تُحسب إلا سنوياً وبالجهد اليدوي. طبقة Dataverse تحوّلها من تمرين سنوي إلى مؤشر حيّ.</p></div>
+</div></section>
+
+<!-- 5 تركيبة -->
+<section id="s5"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٥</span><h2>تحليل التركيبة واختبار كاي تربيع</h2><span class="pill">استدلالي</span></div>
+  <p class="sec-sub">هل تغيّرت تركيبة فئات المستفيدين بين ٢٠٢٣م و٢٠٢٥م تغيّراً ذا دلالة إحصائية، أم أن الفروق مجرد تذبذب عشوائي؟</p>
+  <div class="grid g4" id="chiCards"></div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>أعداد الأسر حسب الفئة</h3><div class="chartbox tall"><canvas id="cComp"></canvas></div></div>
+    <div class="card"><h3>مساهمة كل فئة في إحصاءة كاي تربيع</h3><div class="chartbox tall"><canvas id="cChi"></canvas></div></div>
+  </div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fChi"></p></div>
+  <div class="finding warn"><div class="lab">تحفّظ منهجي</div><p>مطابقة أعداد ٢٠٢٥ بأسماء الفئات تقديرية (المجموع مطابق للإجمالي المعلن ٤٬٣٩٧، لكن ترتيب فئتين غير مؤكد). اختبار حساسية باستبعاد الفئتين غير المؤكدتين يُبقي النتيجة دالة إحصائياً، ومع ذلك يُوصى بتأكيد الأرقام من الجمعية.</p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>تغيّر تركيبة الطلب من سنة لأخرى يجعل التخطيط بالمتوسطات السنوية متأخراً دائماً. هذا هو المبرر التشغيلي للوحة المؤشرات اللحظية (المبادرة ٥) ولتحليلات البيانات الضخمة لاكتشاف الأنماط الموسمية (المبادرة ١٤).</p></div>
+</div></section>
+
+<!-- 6 ارتباط -->
+<section id="s6"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٦</span><h2>تحليل الارتباط</h2><span class="pill">بيرسون · سبيرمان</span></div>
+  <p class="sec-sub">تسعة برامج مشتركة عام ٢٠٢٣م: هل تتحرك مساهمة منصة إحسان مع أولويات الإنفاق الذاتي للجمعية؟</p>
+  <div class="grid g4" id="corrCards"></div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>إنفاق الجمعية مقابل مساهمة إحسان</h3><div class="chartbox tall"><canvas id="cScatter"></canvas></div></div>
+    <div class="card"><h3>فجوة الحصة: أين يفوق التمويل الخارجي الإنفاق الذاتي؟</h3><div class="chartbox tall"><canvas id="cGapShare"></canvas></div></div>
+  </div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fCorr"></p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>غياب الارتباط فجوة تمويلية قابلة للإدارة: طبقة CRM المتبرعين (المبادرة ٧) وتقارير الأثر الشخصي (المبادرة ٤) تتيحان توجيه الحملات نحو البرامج التي يقلّ تمويلها الخارجي بدل ترك التوزيع للصدفة.</p></div>
+</div></section>
+
+<!-- 7 شواذ -->
+<section id="s7"><div class="wrap">
+  <div class="sec-head"><span class="tag">تحليل ٧</span><h2>تحليل القيم الشاذة</h2><span class="pill">Z-score · IQR</span></div>
+  <p class="sec-sub">كشف البنود الخارجة عن النمط العام بمنهجين مستقلين، وهو المنطق نفسه الذي يقوم عليه نموذج الذكاء الاصطناعي المقترح لكشف ازدواجية الطلبات بين الفروع.</p>
+  <div class="grid g4" id="outCards"></div>
+  <div class="card" style="margin-top:18px"><h3>درجة Z لكل بند (الخطان عند ±٢)</h3><div class="chartbox tall"><canvas id="cOut"></canvas></div></div>
+  <div class="finding"><div class="lab">القراءة</div><p id="fOut"></p></div>
+  <div class="finding link"><div class="lab">الربط بالخطة</div><p>القيمة الشاذة ليست خطأً بالضرورة، بل إشارة تستوجب مراجعة. القاعدة الإحصائية نفسها، درجة Z فوق عتبة، هي ما يشغّل تنبيهات ازدواجية الطلبات وتوقّع توقف التبرع (Donor Churn)، ولا تعمل إلا فوق بيانات موحّدة في Dataverse.</p></div>
+</div></section>
+
+<!-- 8 الفجوة -->
+<section id="s8"><div class="wrap">
+  <div class="sec-head"><span class="tag alt">جسر الربط</span><h2>تحليل الفجوة الرقمية</h2><span class="pill">Deloitte DMM</span></div>
+  <p class="sec-sub">من النتائج الكمية إلى أولويات المبادرات: الوضع الحالي مقابل المستهدف بعد ثلاثين شهراً على الأبعاد الستة.</p>
+  <div class="grid g2">
+    <div class="card"><h3>النضج الرقمي: الحالي مقابل المستهدف</h3><div class="chartbox tall"><canvas id="cRadar"></canvas></div></div>
+    <div class="card"><h3>حجم الفجوة وأولوية التدخل</h3><div class="chartbox tall"><canvas id="cGap"></canvas></div></div>
+  </div>
+  <div class="finding"><div class="lab">الخلاصة</div><p>البعد الأدنى، التكامل التشغيلي بين الفروع عند ١٫٠ من ٥، هو نفسه البعد الذي أعاق هذا التحليل عملياً: تعذّر بناء سلسلة زمنية متصلة، وتعارض عدد الفروع بين المصادر (١٠ فروع في التقرير السنوي ٢٠٢٣ مقابل ٧ في الخطة)، وتقارير منشورة كصور. الفجوة الرقمية ليست مفهوماً نظرياً، إنها ظاهرة للعيان في جودة البيانات المتاحة للعموم.</p></div>
+</div></section>
+
+<!-- data -->
+<section id="data"><div class="wrap">
+  <div class="sec-head"><span class="tag n">قاعدة البيانات</span><h2>السجل الموحّد</h2></div>
+  <p class="sec-sub">كل رقم موسوم بمصدره ودرجة الثقة فيه، على النمط نفسه الذي يقترحه مستودع Dataverse المركزي. يمكن استخدام الفلاتر في الشريط أعلاه.</p>
+  <div class="scroll"><table class="ledger">
+    <thead><tr><th>#</th><th>المجال</th><th>البند / المؤشر</th><th>الفئة الفرعية</th><th>السنة</th><th>القيمة</th><th>الوحدة</th><th>المصدر</th><th>الثقة</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table></div>
+  <div class="empty" id="noRows" hidden>لا توجد سجلات مطابقة. يُرجى توسيع نطاق الفلاتر أو إعادة الضبط.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>المصادر</b>
+  <ul class="src">
+    <li>S1، التقرير السنوي ٢٠٢٣م، جمعية البر الأهلية بالرياض (albr.org)</li>
+    <li>S2، التقرير السنوي ٢٠٢٥م، جمعية البر الأهلية بالرياض (albr.org)</li>
+    <li>S3، صفحة الحوكمة والتقارير السنوية (albr.org)</li>
+    <li>S4، الخطة الاستراتيجية لتكامل منظومة التحول الرقمي، مجموعة صناع التغيير</li>
+<li>S5، خريطة المبادرات الرقمية الخمس عشرة، ومنها المبادرة (15) منصة التحليلات الإحصائية ودعم القرار</li>
+  </ul>
+  <p style="margin-top:14px">جميع المبالغ بالريال السعودي. أُعدّت هذه اللوحة كملحق تحليلي للمشروع التطبيقي، وتُقرأ مع ملف الإكسل المرافق الذي يحتوي المعادلات الكاملة.</p>
+</div></footer>
+
+<div id="segTip"></div>
+
+
+
+
+
+
+</div>
+    </div>
+    <div class="sc" id="s-decl">
+      <div class="lvl">
+        <div class="lvc real"><div class="lvc-b">حقيقي</div>
+          <div class="lvc-t">موثّق من التقارير المنشورة</div>
+          <div class="lvc-d">رقم مستخرج نصياً من التقريرين السنويين 2023 و2025 المنشورين على موقع الجمعية</div>
+          <div class="lvc-e">إنفاق 2023: 74,977,313 ريالاً على 22 بنداً · الأسر المستفيدة 4,866 ثم 4,397 · المتطوعون 1,305 ثم 2,820 · مساهمة إحسان 17,259,159</div></div>
+        <div class="lvc goal"><div class="lvc-b">هدف</div>
+          <div class="lvc-t">هدف معلن في الخطة</div>
+          <div class="lvc-d">رقم مستهدف في خطة الجمعية أو في استراتيجية التحول، لم يُقَس بعد ولا يجوز عرضه كإنجاز</div>
+          <div class="lvc-e">توحيد 95% من السجلات · أتمتة 60% من العمليات · ربط أربع منصات وطنية · SROI بنسبة 3.5 إلى 1 · النضج الرقمي 3.8 من 5</div></div>
+        <div class="lvc est"><div class="lvc-b">تقدير</div>
+          <div class="lvc-t">تقدير محسوب</div>
+          <div class="lvc-d">رقم اجتهادي مبني على أثر متوقع لمبادرة، مصرَّح بأساس حسابه وقابل للمناقشة</div>
+          <div class="lvc-e">الأسر المخدومة 6,600 بعد التحول · برامج التدريب 30 · المتطوعون 4,500 · كلفة منصة التحليلات من 18,000 إلى 32,000 ريال</div></div>
+        <div class="lvc sim"><div class="lvc-b">محاكاة</div>
+          <div class="lvc-t">بيانات محاكاة</div>
+          <div class="lvc-d">مولّدة تحاكي بنية مخرجات الأنظمة بعد التكامل، ولا تمثّل مستفيدين حقيقيين</div>
+          <div class="lvc-e">الخمسمئة سجل بحقولها الثمانية عشر: الدخل والإيجار وقيمة الدعم ودرجة الاحتياج والحي والحالة الاجتماعية وشهر الصرف</div></div>
+      </div>
+      <div class="card"><div class="ch">أين تظهر كل درجة في هذا النموذج<span class="ch-s">شاشة بشاشة</span></div>
+        <div class="cb" style="padding:0;overflow-x:auto"><table class="ft"><thead id="dc2-th"></thead><tbody id="dc2-tb"></tbody></table></div></div>
+      <div class="nf w">الخط الفاصل: كل رقم على مستوى المؤسسة موثّق، وكل رقم على مستوى الأسرة محاكى. والسبب نظامي لا اختياري، فبيانات المستفيدين الفردية بيانات شخصية حساسة وفق نظام حماية البيانات الشخصية فلا تُنشر، ولا تُستخرج إلا من داخل أنظمة الجمعية بعد التكامل، والمنظومة لم تُبنَ بعد فلا توجد بيانات فعلية لتحليلها. ولذلك حوكيت البنية لا المضمون: الحقول الثمانية عشر مطابقة لما سينتجه المستودع المركزي، فتُستبدل البيانات دون تغيير حرف في التحليل.</div>
+      <div class="card"><div class="ch">تحفّظات معلنة على الأرقام الموثّقة<span class="ch-s">ثلاثة قيود على المصادر نفسها</span></div>
+        <div class="cb" style="padding:0;overflow-x:auto"><table class="ft"><thead id="cv-th"></thead><tbody id="cv-tb"></tbody></table></div></div>
+      <div class="nf i">قاعدة العرض: إن تعارض رقم بين مخرجين، فملف الإكسل هو الحاكم لأنه يحمل المعادلة، لا اللوحة لأنها تحمل صورتها.</div>
+    </div>
     <div class="sc" id="s-brief">
       <div class="brf" id="bf-h"></div>
       <div class="kg" id="bf-k"></div>
@@ -1106,6 +1690,7 @@ table.ft tr:hover td{background:#F6FBFC}
     <div class="ft-copy">© 1447هـ / 2026م، جميع الحقوق محفوظة لفريق <strong>صنّاع التغيير</strong>، الدبلوم المهني، جامعة المعرفة</div>
     <div class="ft-badge"><div class="ft-bd"></div><div class="ft-bt">Power Platform · Azure AI · IoT</div></div>
   </div>
+  <div class="ft-credit"><span class="ft-credit-in">Prepared by Haneen Al Zakari</span></div>
 </div>
 </div>
 
@@ -1154,6 +1739,8 @@ function build(id){
   else if(id==='stats')bStats();else if(id==='gmap')bGmap();else if(id==='pred')bPred();
   else if(id==='road')bRoad();else if(id==='decide')bDecide();
   else if(id==='dmm')bDmm();else if(id==='gov')bGov();else if(id==='nat')bNat();
+  else if(id==='real'){if(window.requestAnimationFrame)requestAnimationFrame(function(){requestAnimationFrame(bReal);});else setTimeout(bReal,30);}
+  else if(id==='decl')bDecl();
   // kpi and qw have inline HTML; no JS build needed
 }
 
@@ -1451,6 +2038,7 @@ window.onload=function(){
   <div class="drawer-ns">الرئيسية</div>
   <button class="drawer-ni on" id="d-home" onclick="goD('home')"><i>▦</i>لوحة القيادة</button>
   <button class="drawer-ni" id="d-brief" onclick="goD('brief')"><i>☀</i>الموجز الصباحي</button>
+  <button class="drawer-ni" id="d-decl" onclick="goD('decl')"><i>⚑</i>بيان مصادر البيانات</button>
   <button class="drawer-ni" id="d-pipe" onclick="goD('pipe')"><i>⊡</i>طلبات المستفيدين<span class="drawer-nb">38</span></button>
   <div class="drawer-ns" style="padding-top:6px;border-top:.5px solid rgba(255,255,255,.1);margin-top:4px">تنفيذ الاستراتيجية</div>
   <button class="drawer-ni" id="d-road" onclick="goD('road')"><i>▭</i>خارطة الطريق</button>
@@ -1472,6 +2060,8 @@ window.onload=function(){
   <button class="drawer-ni" id="d-roi" onclick="goD('roi')"><i>≈</i>حاسبة العائد</button>
   <button class="drawer-ni" id="d-kpi" onclick="goD('kpi')"><i>◐</i>مؤشرات الأداء KPIs</button>
   <button class="drawer-ni" id="d-qw" onclick="goD('qw')"><i>⚡</i>الأثر المبكر</button>
+  <div class="drawer-ns" style="padding-top:6px;border-top:.5px solid rgba(255,255,255,.1);margin-top:4px">تحليل الأرقام المعلنة</div>
+  <button class="drawer-ni" id="d-real" onclick="goD('real')"><i>⌗</i>التحليلات السبعة</button>
   <div class="drawer-ns" style="padding-top:6px;border-top:.5px solid rgba(255,255,255,.1);margin-top:4px">التحليل الإحصائي ودعم القرار</div>
   <button class="drawer-ni" id="d-stats" onclick="goD('stats')"><i>▤</i>لوحة التحليل الإحصائي</button>
   <button class="drawer-ni" id="d-gmap" onclick="goD('gmap')"><i>⌖</i>خريطة فروع الرياض</button>
@@ -2023,7 +2613,7 @@ function bRoad(){
   document.getElementById('rd-k').innerHTML=[
    ['نسبة الإنجاز الإجمالية',prog.toFixed(0)+'%','مرجّحة بالميزانية',prog>=m/EXEC.span*100?'up':'dn'],
    ['الزمن المنقضي',m+' من '+EXEC.span,'شهراً ('+(m/EXEC.span*100).toFixed(0)+'%)','nt'],
-   ['مبادرات مكتملة',doneN+' من '+I.length,lateN+' متأخرة و'+I.filter(function(r){return r[5]==='run';}).length+' جارية',lateN?'dn':'up'],
+   ['مبادرات مكتملة',doneN+' من '+(I.length-1),lateN+' متأخرة و'+I.filter(function(r){return r[5]==='run';}).length+' جارية',lateN?'dn':'up'],
    ['المصروف من الميزانية',ar(spent)+' ر','من '+ar(EXEC.budget)+' ('+(spent/EXEC.budget*100).toFixed(0)+'%)','nt']
   ].map(function(k){return '<div class="kc"><div class="kl">'+k[0]+'</div><div class="kv">'+k[1]+'</div><div class="kd '+k[3]+'">'+k[2]+'</div></div>';}).join('');
 
@@ -2740,6 +3330,567 @@ if(typeof Chart==='undefined'){
     b.textContent='تعذر تحميل مكتبة الرسوم البيانية؛ الاتصال بالإنترنت مطلوب لعرض المخططات. باقي المحتوى والجداول والخريطة تعمل بشكل طبيعي.';
     document.body.appendChild(b);};
   document.head.appendChild(_s);
+}
+</script>
+<script>
+var RQ_BUILT=false;
+function bReal(){
+  if(RQ_BUILT)return; RQ_BUILT=true;
+  try{
+
+
+/* ===================== البيانات ===================== */
+const SPEND = [
+["مساعدات الزكاة النقدية",42922243,"رعوي"],["الأضاحي",3565750,"موسمي"],["الكفارات",3148470,"رعوي"],
+["زكاة الفطر",2899185,"موسمي"],["إفطار الصائم",2733404,"موسمي"],["المساعدات الغذائية",2421492,"رعوي"],
+["العقائق والذبائح",2386272,"رعوي"],["الإيجارات والفواتير",2348743,"رعوي"],["تفريج الكربة",2208864,"رعوي"],
+["صدقة الملك عبدالعزيز",2000000,"موسمي"],["كفالة أسرة سجين",1602366,"رعوي"],["احتياجات الطالب المدرسية",1399775,"موسمي"],
+["تجهيزات منزلية",1173647,"رعوي"],["فرحة عيد",1114557,"موسمي"],["إيجارات (منصة جود)",850112,"موسمي"],
+["السلة الرمضانية",732723,"موسمي"],["صدقة الشتاء",553398,"موسمي"],["الصندوق المجتمعي – تفريج كربة",445350,"رعوي"],
+["مشروع نطعمهم",169650,"موسمي"],["سقيا الماء",136112,"رعوي"],["مساعدات العلاج",110000,"رعوي"],
+["التنمية والتدريب",55200,"تنموي"]];
+
+const EHSAN=[["زكاة الفطر",9767100],["سقيا ماء",1937568],["التدريب والتعليم",1432391],["سلال غذائية",1045100],
+["كفالة أسرة",900000],["تفريج كربة",768000],["كفالة الأرامل والمطلقات",500500],["تأثيث منازل",505500],
+["تفطير صائم",400000],["إيجارات",3000]];
+
+const PAIRS=[["زكاة الفطر",2899185,9767100],["سقيا الماء",136112,1937568],["التدريب والتنمية",55200,1432391],
+["السلال الغذائية",2421492,1045100],["كفالة الأسرة",1602366,900000],["تفريج الكربة",2654214,768000],
+["تجهيزات منزلية",1173647,505500],["إفطار الصائم",2733404,400000],["الإيجارات",2348743,3000]];
+
+const BENEF=[["الأسر المطلقة",2640,3026,"مرتفعة"],["الأسر العاجزة / أسرة مواطنة",1081,201,"منخفضة"],
+["الأسر الأرامل",539,571,"مرتفعة"],["الأسر المريضة",333,342,"مرتفعة"],["أسر السجناء",98,103,"مرتفعة"],
+["أسرة معاق",90,114,"متوسطة"],["مواطنة زوجة مقيم",46,36,"متوسطة"],["الأسر المعلقة",39,4,"منخفضة"]];
+
+const KPI=[["عدد المستفيدين من الرعاية","الرعاية",4866,4397,"مستفيد"],["الفرص التطوعية","التطوع",636,576,"فرصة"],
+["عدد المتطوعين","التطوع",1305,2820,"متطوع"],["ساعات التطوع","التطوع",67135.5,91930,"ساعة"],
+["العائد الاقتصادي للتطوع","التطوع",2054427,2337937,"ريال"],["رضا المتطوعين","التطوع",99.95,96.82,"%"],
+["برامج التدريب والتأهيل","التمكين",27,18,"برنامج"],["برامج التوظيف","التمكين",18,16,"برنامج"],
+["مستفيدو برامج التأهيل","التمكين",1207,6860,"مستفيد"],["العائد الاقتصادي للتأهيل","التمكين",2566352,6485958,"ريال"],
+["عمليات التبرع الإلكتروني","التبرعات",41877,47682,"عملية"],["المتبرعون الإلكترونيون","التبرعات",18012,12084,"متبرع"],
+["مساهمة منصة إحسان","التبرعات",17259159,15586622,"ريال"]];
+
+const GOV=[["السلامة المالية",92.78],["الشفافية والإفصاح",99.75],["الامتثال والالتزام",100]];
+const DMM=[["الاستراتيجية الرقمية",2.5,4.5],["العمليات والأتمتة",1.5,4.0],["إدارة البيانات والتحليلات",1.5,4.0],
+["البنية التقنية والتحتية",2.5,4.5],["ثقافة الكوادر والمهارات",2.0,4.0],["التكامل التشغيلي بين الفروع",1.0,3.8]];
+
+/* بناء السجل الموحّد */
+const ROWS=[];
+SPEND.forEach(([n,v,p])=>ROWS.push({dom:"إنفاق البرامج",item:n,sub:p,year:2023,val:v,unit:"ريال",src:"S1",conf:"مؤكدة"}));
+EHSAN.forEach(([n,v])=>ROWS.push({dom:"منصة إحسان",item:n,sub:"تمويل خارجي",year:2023,val:v,unit:"ريال",src:"S1",conf:"مؤكدة"}));
+BENEF.forEach(([c,a,b,k])=>{ROWS.push({dom:"فئات المستفيدين",item:c,sub:"رعاية اجتماعية",year:2023,val:a,unit:"أسرة",src:"S1",conf:"مؤكدة"});
+  ROWS.push({dom:"فئات المستفيدين",item:c,sub:"رعاية اجتماعية",year:2025,val:b,unit:"أسرة",src:"S2",conf:k});});
+KPI.forEach(([n,d,a,b,u])=>{ROWS.push({dom:d,item:n,sub:"مؤشر تشغيلي",year:2023,val:a,unit:u,src:"S1",conf:"مؤكدة"});
+  ROWS.push({dom:d,item:n,sub:"مؤشر تشغيلي",year:2025,val:b,unit:u,src:"S2",conf:"مؤكدة"});});
+ROWS.push({dom:"التبرعات",item:"إجمالي التبرعات عبر المنصة",sub:"مؤشر تشغيلي",year:2023,val:10604365,unit:"ريال",src:"S1",conf:"مؤكدة"});
+GOV.forEach(([d,v])=>ROWS.push({dom:"الحوكمة",item:d,sub:"تقييم المركز الوطني",year:2024,val:v,unit:"%",src:"S2",conf:"متوسطة"}));
+ROWS.push({dom:"الحوكمة",item:"الدرجة الإجمالية للحوكمة",sub:"تقييم المركز الوطني",year:2022,val:96,unit:"%",src:"S3",conf:"مؤكدة"});
+ROWS.push({dom:"الحوكمة",item:"الدرجة الإجمالية للحوكمة",sub:"تقييم المركز الوطني",year:2024,val:97.74,unit:"%",src:"S3",conf:"مؤكدة"});
+DMM.forEach(([d,c,t])=>{ROWS.push({dom:"النضج الرقمي",item:d,sub:"الوضع الحالي",year:2026,val:c,unit:"درجة/5",src:"S4",conf:"مؤكدة"});
+  ROWS.push({dom:"النضج الرقمي",item:d,sub:"المستهدف",year:2028,val:t,unit:"درجة/5",src:"S4",conf:"مؤكدة"});});
+ROWS.forEach((r,i)=>r.id=i+1);
+
+/* ===================== أدوات إحصائية ===================== */
+const AR=n=>n.toLocaleString("ar-EG",{maximumFractionDigits:1});
+const PC=x=>(x*100).toFixed(1)+"٪";
+const sum=a=>a.reduce((s,x)=>s+x,0);
+const mean=a=>sum(a)/a.length;
+const median=a=>{const s=[...a].sort((x,y)=>x-y),m=s.length>>1;return s.length%2?s[m]:(s[m-1]+s[m])/2;};
+const sd=a=>{const m=mean(a);return Math.sqrt(sum(a.map(x=>(x-m)**2))/(a.length-1));};
+const quart=(a,q)=>{const s=[...a].sort((x,y)=>x-y),p=(s.length-1)*q,lo=Math.floor(p),hi=Math.ceil(p);
+  return lo===hi?s[lo]:s[lo]+(p-lo)*(s[hi]-s[lo]);};
+const gini=a=>{const s=[...a].sort((x,y)=>x-y),n=s.length,t=sum(s);
+  return (2*sum(s.map((v,i)=>(i+1)*v)))/(n*t)-(n+1)/n;};
+const pearson=(x,y)=>{const mx=mean(x),my=mean(y);
+  return sum(x.map((v,i)=>(v-mx)*(y[i]-my)))/Math.sqrt(sum(x.map(v=>(v-mx)**2))*sum(y.map(v=>(v-my)**2)));};
+const rank=a=>a.map(v=>a.filter(u=>u>v).length+1);
+const spearman=(x,y)=>{const rx=rank(x),ry=rank(y),n=x.length;
+  return 1-6*sum(rx.map((v,i)=>(v-ry[i])**2))/(n*(n*n-1));};
+
+/* ===================== ألوان ورسوم ===================== */
+const C={ink:"#16232B",green:"#1F6B4F",greenL:"#3E9A76",gold:"#A8792C",clay:"#9C4A34",slate:"#5A7284",rule:"#E3DED1"};
+ /* حماية: لا تتوقف الشاشة إن تعذّر تحميل مكتبة الرسوم */
+ var RQ_NOCHART=false;
+ if(typeof Chart==="undefined"){
+   RQ_NOCHART=true;
+   window.Chart=function(){this.destroy=function(){};this.update=function(){};this.resize=function(){};};
+   window.Chart.defaults={font:{},color:"",plugins:{legend:{}}};
+ }
+ Chart.defaults=Chart.defaults||{}; Chart.defaults.font=Chart.defaults.font||{};
+Chart.defaults.font.family="'Sakkal Majalla','Tajawal',Arial,sans-serif";
+Chart.defaults.font.size=11;
+Chart.defaults.color="#3D5361";
+const charts={};
+function draw(id,cfg){if(charts[id])charts[id].destroy();charts[id]=new Chart(document.getElementById(id),cfg);}
+const noGrid={grid:{display:false},border:{color:C.rule}};
+const softGrid={grid:{color:"#F0EBDF"},border:{display:false}};
+
+/* ===================== الشريط التوقيعي ===================== */
+(function(){
+  const strip=document.getElementById("strip"),tip=document.getElementById("segTip");
+  const T=sum(SPEND.map(r=>r[1]));
+  const shades=["#123D2C","#1F6B4F","#2F8462","#3E9A76","#57AC8B","#72BDA0","#8CCBB3","#A8792C","#BB9146","#CBA766","#D9BD8B","#5A7284","#6E8697","#8299A8","#96ACB9","#AABFC9","#BED1D9","#9C4A34","#B0654F","#C2816C","#D19E8C","#DEBAAC"];
+  SPEND.forEach((r,i)=>{
+    const d=document.createElement("div");
+    d.className="seg"; d.style.width=(r[1]/T*100)+"%"; d.style.background=shades[i%shades.length];
+    d.tabIndex=0;
+    const label=r[0]+" · "+AR(r[1])+" ريال · "+PC(r[1]/T);
+    const show=e=>{tip.textContent=label;tip.style.opacity=1;
+      const x=(e.clientX||window.innerWidth/2),y=(e.clientY||120);
+      tip.style.left=Math.min(x+12,window.innerWidth-tip.offsetWidth-12)+"px";tip.style.top=(y-38)+"px";};
+    d.addEventListener("mousemove",show); d.addEventListener("focus",show);
+    d.addEventListener("mouseleave",()=>tip.style.opacity=0); d.addEventListener("blur",()=>tip.style.opacity=0);
+    strip.appendChild(d);
+  });
+})();
+  
+
+
+/* ===================== الفلاتر ===================== */
+const uniq=k=>[...new Set(ROWS.map(r=>r[k]))];
+function fillSel(id,vals){const s=document.getElementById(id);vals.sort().forEach(v=>{
+  const o=document.createElement("option");o.value=v;o.textContent=v;s.appendChild(o);});}
+fillSel("fYear",uniq("year").map(String)); fillSel("fDomain",uniq("dom"));
+fillSel("fSub",uniq("sub")); fillSel("fConf",uniq("conf"));
+document.getElementById("tot").textContent=AR(ROWS.length);
+
+function current(){
+  const y=fYear.value,d=fDomain.value,s=fSub.value,c=fConf.value,q=fQ.value.trim();
+  return ROWS.filter(r=>(!y||String(r.year)===y)&&(!d||r.dom===d)&&(!s||r.sub===s)&&(!c||r.conf===c)&&(!q||r.item.includes(q)));
+}
+function renderTable(rows){
+  const tb=document.getElementById("tbody"); tb.innerHTML="";
+  const cls={"مؤكدة":"ok","مرتفعة":"ok","متوسطة":"mid","منخفضة":"low"};
+  rows.forEach(r=>{
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td class="n">${r.id}</td><td>${r.dom}</td><td>${r.item}</td><td>${r.sub}</td>
+      <td class="n">${r.year}</td><td class="n">${AR(r.val)}</td><td>${r.unit}</td><td class="n">${r.src}</td>
+      <td><span class="pill ${cls[r.conf]||""}">${r.conf}</span></td>`;
+    tb.appendChild(tr);
+  });
+  document.getElementById("cnt").textContent=AR(rows.length);
+  document.getElementById("noRows").hidden=rows.length>0;
+}
+function statCard(k,v,unit,delta){
+  return `<div class="stat"><div class="k">${k}</div><div class="v">${v}${unit?` <small>${unit}</small>`:""}</div>
+  ${delta?`<div class="d ${delta.cls}">${delta.txt}</div>`:""}</div>`;
+}
+
+/* ===================== 1 وصفي + 2 تركّز (يتأثران بالفلاتر) ===================== */
+function renderDesc(rows){
+  const spend=rows.filter(r=>r.unit==="ريال").map(r=>r.val).sort((a,b)=>b-a);
+  const box=document.getElementById("descCards"), cbox=document.getElementById("concCards");
+  if(spend.length<3){
+    box.innerHTML=`<div class="stat" style="grid-column:1/-1"><div class="k">تنبيه</div><div class="v" style="font-size:15px">تحتاج ثلاثة بنود مالية على الأقل</div><div class="d">يُرجى توسيع نطاق الفلاتر لعرض المقاييس الإحصائية.</div></div>`;
+    cbox.innerHTML=""; document.getElementById("fDesc").textContent="·"; document.getElementById("fConc").textContent="·";
+    ["cDesc","cBox","cPareto","cLorenz"].forEach(id=>{if(charts[id]){charts[id].destroy();delete charts[id];}});
+    return;
+  }
+  const n=spend.length,m=mean(spend),md=median(spend),s=sd(spend),cv=s/m,
+        q1=quart(spend,.25),q3=quart(spend,.75),iqr=q3-q1,T=sum(spend),g=gini(spend),
+        hhi=sum(spend.map(v=>(v/T)**2));
+  const labels=rows.filter(r=>r.unit==="ريال").sort((a,b)=>b.val-a.val).map(r=>r.item);
+
+  box.innerHTML=[
+    statCard("عدد البنود",AR(n),""),
+    statCard("المتوسط الحسابي",AR(Math.round(m)),"ريال"),
+    statCard("الوسيط",AR(Math.round(md)),"ريال",{cls:"down",txt:`المتوسط يفوق الوسيط بـ ${(m/md).toFixed(2)}×`}),
+    statCard("معامل الاختلاف",PC(cv),"",{cls:cv>1?"down":"up",txt:cv>1?"تشتّت شديد جداً":"تشتّت معتدل"})
+  ].join("");
+
+  let cum=0; const cumArr=spend.map(v=>{cum+=v/T;return cum*100;});
+  const k80=cumArr.findIndex(v=>v>=80)+1;
+
+  cbox.innerHTML=[
+    statCard("حصة البند الأكبر",PC(spend[0]/T),""),
+    statCard("عدد البنود = ٨٠٪ من الإنفاق",AR(k80),`من ${AR(n)}`,{cls:"down",txt:`أي ${PC(k80/n)} من البنود`}),
+    statCard("مؤشر هيرفندال HHI",hhi.toFixed(3),"",{cls:hhi>.25?"down":"up",txt:hhi>.25?"تركّز شديد (>0.25)":"تركّز معتدل"}),
+    statCard("معامل جيني",g.toFixed(3),"",{cls:g>.5?"down":"up",txt:`العدد المكافئ للبنود ${(1/hhi).toFixed(1)}`})
+  ].join("");
+
+  document.getElementById("fDesc").textContent =
+    `المتوسط (${AR(Math.round(m))} ريال) يفوق الوسيط (${AR(Math.round(md))} ريال) بمقدار ${(m/md).toFixed(2)} ضعف، ومعامل الاختلاف ${PC(cv)}، توزيع شديد الالتواء يميناً. المدى الربيعي ${AR(Math.round(iqr))} ريال، أي أن نصف البنود يقع في نطاق ضيق بينما تنفرد قلة بالمبالغ الكبرى.`;
+  document.getElementById("fConc").textContent =
+    `${AR(k80)} بنداً فقط (${PC(k80/n)} من العدد) تصنع ٨٠٪ من الإنفاق، والبند الأكبر وحده يستحوذ على ${PC(spend[0]/T)}. مؤشر هيرفندال ${hhi.toFixed(3)} ومعامل جيني ${g.toFixed(3)} يؤكدان الاستنتاج نفسه: المنظومة تتصرف كما لو كان لديها ${(1/hhi).toFixed(1)} برامج فعلية لا ${AR(n)}.`;
+
+  draw("cDesc",{type:"bar",data:{labels,datasets:[{data:spend,backgroundColor:C.green,borderWidth:0}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{...softGrid,ticks:{callback:v=>AR(v)}},y:{...noGrid,ticks:{font:{size:10}}}}}});
+
+  draw("cBox",{type:"bar",data:{labels:["أدنى قيمة","الربيع الأول","الوسيط","المتوسط","الربيع الثالث","أعلى قيمة"],
+    datasets:[{data:[Math.min(...spend),q1,md,m,q3,Math.max(...spend)],
+      backgroundColor:[C.slate,C.greenL,C.green,C.gold,C.greenL,C.clay],borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>AR(Math.round(c.parsed.y))+" ريال"}}},
+      scales:{y:{...softGrid,ticks:{callback:v=>AR(v)}},x:noGrid}}});
+
+  draw("cPareto",{data:{labels,datasets:[
+    {type:"bar",label:"المبلغ",data:spend,backgroundColor:C.green,borderWidth:0,yAxisID:"y"},
+    {type:"line",label:"الحصة التراكمية ٪",data:cumArr,borderColor:C.gold,backgroundColor:C.gold,
+     borderWidth:2,pointRadius:2,yAxisID:"y1",tension:.25}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:"bottom",labels:{boxWidth:10}}},
+      scales:{y:{...softGrid,ticks:{callback:v=>AR(v)}},
+              y1:{position:"left",max:100,grid:{display:false},ticks:{callback:v=>v+"٪"}},
+              x:{...noGrid,ticks:{font:{size:9},maxRotation:70,minRotation:70}}}}});
+
+  const asc=[...spend].sort((a,b)=>a-b); let c2=0;
+  const lor=[0,...asc.map(v=>{c2+=v/T;return c2*100;})];
+  const eq=lor.map((_,i)=>i/(lor.length-1)*100);
+  draw("cLorenz",{type:"line",data:{labels:lor.map((_,i)=>Math.round(i/(lor.length-1)*100)+"٪"),
+    datasets:[{label:"التوزيع الفعلي",data:lor,borderColor:C.green,backgroundColor:"rgba(31,107,79,.10)",fill:true,tension:.3,pointRadius:0,borderWidth:2},
+              {label:"التوزيع المتساوي التام",data:eq,borderColor:C.gold,borderDash:[5,4],pointRadius:0,borderWidth:1.5}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:"bottom",labels:{boxWidth:10}},
+        title:{display:true,text:"معامل جيني = "+g.toFixed(3)+" (المساحة بين المنحنيين)",color:C.ink,font:{size:12}}},
+      scales:{y:{...softGrid,max:100,ticks:{callback:v=>v+"٪"},title:{display:true,text:"نسبة الإنفاق التراكمية"}},
+              x:{...noGrid,title:{display:true,text:"نسبة البنود التراكمية"}}}}});
+}
+
+/* ===================== 3 نمو ===================== */
+(function(){
+  const cagr=r=>Math.pow(r[3]/r[2],1/2)-1;
+  const rows=KPI.map(r=>({name:r[0],dom:r[1],a:r[2],b:r[3],g:cagr(r)})).sort((x,y)=>y.g-x.g);
+  const grow=rows.filter(r=>r.g>0).length;
+  document.getElementById("growthCards").innerHTML=[
+    statCard("مؤشرات نامية",AR(grow),`من ${AR(rows.length)}`,{cls:"up",txt:PC(grow/rows.length)+" من المؤشرات"}),
+    statCard("مؤشرات متراجعة",AR(rows.length-grow),"",{cls:"down",txt:PC(1-grow/rows.length)+" من المؤشرات"}),
+    statCard("أعلى نمو سنوي",PC(rows[0].g),"",{cls:"up",txt:rows[0].name}),
+    statCard("أشد تراجع سنوي",PC(rows[rows.length-1].g),"",{cls:"down",txt:rows[rows.length-1].name})
+  ].join("");
+  document.getElementById("fGrowth").textContent =
+    `${AR(grow)} من ${AR(rows.length)} مؤشراً في نمو. أبرز مفارقة: مستفيدو برامج التأهيل ارتفعوا بمعدل ${PC(rows.find(r=>r.name.includes("التأهيل")&&r.name.includes("مستفيدو")).g)} سنوياً بينما تراجع عدد برامج التدريب ذاتها، أي خدمة أوسع بموارد برامجية أقل. في المقابل، تضاعف عدد المتطوعين تقريباً بينما انخفض متوسط ساعات المتطوع الواحد، وارتفعت عمليات التبرع مع انخفاض عدد المتبرعين، وهو نمط تركّز يستحق مراجعة إدارية.`;
+  draw("cGrowth",{type:"bar",data:{labels:rows.map(r=>r.name),
+    datasets:[{data:rows.map(r=>+(r.g*100).toFixed(1)),
+      backgroundColor:rows.map(r=>r.g>0?C.green:C.clay),borderWidth:0}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+"٪ سنوياً"}}},
+      scales:{x:{...softGrid,ticks:{callback:v=>v+"٪"}},y:{...noGrid,ticks:{font:{size:10}}}}}});
+})();
+  
+
+
+/* ===================== 4 كفاءة ===================== */
+(function(){
+  const V={spend23:sum(SPEND.map(r=>r[1])),ben23:4866,hrs23:67135.5,hrs25:91930,vret23:2054427,vret25:2337937,
+    vol23:1305,vol25:2820,tr23:1207,tr25:6860,tret23:2566352,tret25:6485958,don23:10604365,
+    op23:41877,op25:47682,dr23:18012,dr25:12084,eh23:17259159};
+  const R=[
+    ["العائد لكل ساعة تطوع (ريال)",V.vret23/V.hrs23,V.vret25/V.hrs25],
+    ["ساعات التطوع لكل متطوع",V.hrs23/V.vol23,V.hrs25/V.vol25],
+    ["العائد لكل متطوع (ريال)",V.vret23/V.vol23,V.vret25/V.vol25],
+    ["العائد لكل مستفيد تأهيل (ريال)",V.tret23/V.tr23,V.tret25/V.tr25],
+    ["عمليات التبرع لكل متبرع",V.op23/V.dr23,V.op25/V.dr25]
+  ];
+  document.getElementById("effCards").innerHTML=[
+    statCard("متوسط الإنفاق لكل أسرة مستفيدة",AR(Math.round(V.spend23/V.ben23)),"ريال"),
+    statCard("متوسط قيمة عملية التبرع",AR(Math.round(V.don23/V.op23)),"ريال"),
+    statCard("متوسط تبرع المتبرع الواحد",AR(Math.round(V.don23/V.dr23)),"ريال"),
+    statCard("مساهمة إحسان ÷ الإنفاق البرامجي",PC(V.eh23/V.spend23),"",{cls:"down",txt:"اعتماد ملحوظ على قناة تمويل واحدة"})
+  ].join("");
+  document.getElementById("fEff").textContent =
+    `العائد الاقتصادي للساعة التطوعية انخفض من ${R[0][1].toFixed(1)} إلى ${R[0][2].toFixed(1)} ريال، وساعات المتطوع الواحد من ${R[1][1].toFixed(0)} إلى ${R[1][2].toFixed(0)} ساعة: النمو في أعداد المتطوعين كان أسرع من نمو الساعات المستثمرة. أما تكرار التبرع فارتفع من ${R[4][1].toFixed(2)} إلى ${R[4][2].toFixed(2)} عملية لكل متبرع، أي ولاء أعلى لقاعدة أصغر، وهو بالضبط سيناريو الاحتفاظ بالمتبرع الذي يعالجه نظام CRM.`;
+  draw("cEff",{type:"bar",data:{labels:R.map(r=>r[0]),datasets:[
+    {label:"٢٠٢٣",data:R.map(r=>+r[1].toFixed(2)),backgroundColor:C.slate,borderWidth:0},
+    {label:"٢٠٢٥",data:R.map(r=>+r[2].toFixed(2)),backgroundColor:C.green,borderWidth:0}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:"bottom",labels:{boxWidth:10}}},
+      scales:{x:{type:"logarithmic",...softGrid,ticks:{callback:v=>AR(v)}},y:{...noGrid,ticks:{font:{size:10}}}}}});
+})();
+  
+
+
+/* ===================== 5 تركيبة + كاي² ===================== */
+(function(){
+  const t23=sum(BENEF.map(r=>r[1])),t25=sum(BENEF.map(r=>r[2]));
+  const exp=BENEF.map(r=>r[1]/t23*t25);
+  const contrib=BENEF.map((r,i)=>(r[2]-exp[i])**2/exp[i]);
+  const chi=sum(contrib);
+  const hhi23=sum(BENEF.map(r=>(r[1]/t23)**2)), hhi25=sum(BENEF.map(r=>(r[2]/t25)**2));
+  const maxi=contrib.indexOf(Math.max(...contrib));
+  document.getElementById("chiCards").innerHTML=[
+    statCard("إحصاءة كاي تربيع χ²",chi.toFixed(1),"df = 7"),
+    statCard("القيمة الاحتمالية p",'< 0.001',"",{cls:"down",txt:"أقل بكثير من α = 0.05"}),
+    statCard("القرار الإحصائي","تغيّر دال","",{cls:"down",txt:"التركيبة تغيّرت فعلاً لا صدفة"}),
+    statCard("تركّز الفئات HHI",hhi23.toFixed(3)+" ← "+hhi25.toFixed(3),"",{cls:"down",txt:"الطلب يتركّز في فئات أقل"})
+  ].join("");
+  document.getElementById("fChi").textContent =
+    `χ² = ${chi.toFixed(1)} عند ٧ درجات حرية وقيمة احتمالية أقل من ٠٫٠٠١: تركيبة فئات المستفيدين تغيّرت تغيّراً ذا دلالة إحصائية بين العامين. أكبر مساهم في هذا التغيّر فئة «${BENEF[maxi][0]}». في الوقت نفسه ارتفع تركّز الفئات (HHI) من ${hhi23.toFixed(3)} إلى ${hhi25.toFixed(3)}، أي أن الطلب صار أكثر تركّزاً في عدد أقل من الفئات، والأسر المطلقة وحدها تمثّل ${PC(BENEF[0][2]/t25)} من الحالات في ٢٠٢٥.`;
+  draw("cComp",{type:"bar",data:{labels:BENEF.map(r=>r[0]),datasets:[
+    {label:"٢٠٢٣",data:BENEF.map(r=>r[1]),backgroundColor:C.slate,borderWidth:0},
+    {label:"٢٠٢٥",data:BENEF.map(r=>r[2]),backgroundColor:C.green,borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10}}},
+      scales:{y:{...softGrid,ticks:{callback:v=>AR(v)}},x:{...noGrid,ticks:{font:{size:9},maxRotation:60,minRotation:60}}}}});
+  draw("cChi",{type:"bar",data:{labels:BENEF.map(r=>r[0]),
+    datasets:[{data:contrib.map(v=>+v.toFixed(1)),backgroundColor:BENEF.map(r=>r[3]==="منخفضة"?C.gold:C.clay),borderWidth:0}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},title:{display:true,text:"الذهبي = فئة مطابقتها غير مؤكدة",color:"#3D5361",font:{size:11}}},
+      scales:{x:{...softGrid},y:{...noGrid,ticks:{font:{size:10}}}}}});
+})();
+  
+
+
+/* ===================== 6 ارتباط ===================== */
+(function(){
+  const x=PAIRS.map(r=>r[1]),y=PAIRS.map(r=>r[2]);
+  const r=pearson(x,y),rho=spearman(x,y);
+  const sx=sum(x),sy=sum(y);
+  const gaps=PAIRS.map((p,i)=>({n:p[0],g:(y[i]/sy)-(x[i]/sx)})).sort((a,b)=>b.g-a.g);
+  document.getElementById("corrCards").innerHTML=[
+    statCard("ارتباط بيرسون r",r.toFixed(3),"",{cls:"down",txt:"القيمة الحرجة عند n=9 هي 0.666"}),
+    statCard("معامل التحديد R²",(r*r).toFixed(3),"",{cls:"down",txt:"يفسّر "+PC(r*r)+" فقط من التباين"}),
+    statCard("ارتباط سبيرمان ρ",rho.toFixed(3),"",{cls:"down",txt:"الترتيب شبه مستقل"}),
+    statCard("القرار الإحصائي","غير دال","",{cls:"down",txt:"لا تطابق بين أولويتي الإنفاق والتمويل"})
+  ].join("");
+  document.getElementById("fCorr").textContent =
+    `بيرسون ${r.toFixed(3)} وسبيرمان ${rho.toFixed(3)}، كلاهما دون العتبة الحرجة (٠٫٦٦٦ عند تسعة أزواج)، ولا يفسّر الارتباط سوى ${PC(r*r)} من التباين. عملياً: أولويات التمويل الوارد عبر إحسان لا تتبع أولويات إنفاق الجمعية. أوضح مثال «${gaps[0].n}» حيث تفوق حصة التمويل الخارجي حصة الإنفاق الذاتي بفارق ${PC(Math.abs(gaps[0].g))}، مقابل «${gaps[gaps.length-1].n}» في الطرف المقابل.`;
+  draw("cScatter",{type:"scatter",data:{datasets:[{label:"برامج ٢٠٢٣",
+    data:PAIRS.map(p=>({x:p[1],y:p[2],n:p[0]})),backgroundColor:C.green,pointRadius:6,pointHoverRadius:9}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${c.raw.n}: الجمعية ${AR(c.raw.x)} · إحسان ${AR(c.raw.y)}`}}},
+      scales:{x:{...softGrid,title:{display:true,text:"إنفاق الجمعية (ريال)"},ticks:{callback:v=>AR(v)}},
+              y:{...softGrid,title:{display:true,text:"مساهمة إحسان (ريال)"},ticks:{callback:v=>AR(v)}}}}});
+  draw("cGapShare",{type:"bar",data:{labels:gaps.map(g=>g.n),
+    datasets:[{data:gaps.map(g=>+(g.g*100).toFixed(1)),
+      backgroundColor:gaps.map(g=>g.g>0?C.gold:C.slate),borderWidth:0}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>(c.parsed.x>0?"تمويل خارجي أعلى بـ ":"إنفاق ذاتي أعلى بـ ")+Math.abs(c.parsed.x)+" نقطة مئوية"}}},
+      scales:{x:{...softGrid,ticks:{callback:v=>v+"٪"}},y:{...noGrid,ticks:{font:{size:10}}}}}});
+})();
+  
+
+
+/* ===================== 7 شواذ ===================== */
+(function(){
+  const v=SPEND.map(r=>r[1]),m=mean(v),s=sd(v),q1=quart(v,.25),q3=quart(v,.75),iqr=q3-q1;
+  const lo=q1-1.5*iqr,hi=q3+1.5*iqr;
+  const rows=SPEND.map(r=>({n:r[0],v:r[1],z:(r[1]-m)/s,out:(Math.abs((r[1]-m)/s)>2)&&(r[1]<lo||r[1]>hi)})).sort((a,b)=>b.z-a.z);
+  const outs=rows.filter(r=>r.out);
+  const clean=rows.filter(r=>!r.out).map(r=>r.v);
+  document.getElementById("outCards").innerHTML=[
+    statCard("قيم شاذة مؤكدة",AR(outs.length),`من ${AR(rows.length)}`,{cls:"down",txt:outs.map(o=>o.n).join("، ")||"لا يوجد"}),
+    statCard("الحد الأعلى وفق IQR",AR(Math.round(hi)),"ريال"),
+    statCard("المتوسط بعد استبعاد الشواذ",AR(Math.round(mean(clean))),"ريال"),
+    statCard("أثر الشواذ على المتوسط",PC(m/mean(clean)-1),"",{cls:"down",txt:"تضخيم المتوسط المعلن"})
+  ].join("");
+  document.getElementById("fOut").textContent =
+    `بند واحد فقط، «${outs[0].n}» بدرجة Z = ${outs[0].z.toFixed(2)}، يجتاز عتبتي Z و IQR معاً. أثره جسيم: استبعاده يخفض المتوسط من ${AR(Math.round(m))} إلى ${AR(Math.round(mean(clean)))} ريال، أي أن وجوده يضخّم المتوسط بنسبة ${PC(m/mean(clean)-1)}. هذا ليس خطأً في البيانات بل خاصية بنيوية: مساعدات الزكاة النقدية فئة إنفاق مختلفة نوعياً عن المشاريع الموسمية، وينبغي فصلها في أي تقرير مقارن.`;
+  draw("cOut",{type:"bar",data:{labels:rows.map(r=>r.n),
+    datasets:[{data:rows.map(r=>+r.z.toFixed(2)),
+      backgroundColor:rows.map(r=>r.out?C.clay:(Math.abs(r.z)>1?C.gold:C.greenL)),borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>"Z = "+c.parsed.y}}},
+      scales:{y:{...softGrid,suggestedMin:-2.5,suggestedMax:4.5,title:{display:true,text:"درجة Z"}},
+              x:{...noGrid,ticks:{font:{size:9},maxRotation:70,minRotation:70}}}}});
+})();
+  
+
+
+/* ===================== 8 الفجوة ===================== */
+(function(){
+  draw("cRadar",{type:"radar",data:{labels:DMM.map(d=>d[0]),datasets:[
+    {label:"الحالي",data:DMM.map(d=>d[1]),borderColor:C.clay,backgroundColor:"rgba(156,74,52,.16)",borderWidth:2,pointRadius:3},
+    {label:"المستهدف",data:DMM.map(d=>d[2]),borderColor:C.green,backgroundColor:"rgba(31,107,79,.12)",borderWidth:2,pointRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10}}},
+      scales:{r:{min:0,max:5,ticks:{stepSize:1,backdropColor:"transparent"},grid:{color:"#E3DED1"},
+        pointLabels:{font:{size:10}}}}}});
+  const g=DMM.map(d=>({n:d[0],gap:d[2]-d[1],pct:d[1]/d[2]})).sort((a,b)=>b.gap-a.gap);
+  draw("cGap",{type:"bar",data:{labels:g.map(x=>x.n),datasets:[
+    {label:"حجم الفجوة (درجة)",data:g.map(x=>+x.gap.toFixed(1)),backgroundColor:C.gold,borderWidth:0},
+    {label:"نسبة الإنجاز الحالية ٪",data:g.map(x=>+(x.pct*100).toFixed(0)),backgroundColor:C.slate,borderWidth:0,xAxisID:"x2"}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:"bottom",labels:{boxWidth:10}}},
+      scales:{x:{...softGrid,max:3.5},x2:{display:false,max:100},y:{...noGrid,ticks:{font:{size:10}}}}}});
+})();
+  
+
+
+/* ===================== التشغيل ===================== */
+var FIDS=["fYear","fDomain","fSub","fConf"];
+var DEFAULTS={fYear:"",fDomain:"إنفاق البرامج",fSub:"",fConf:"",fQ:""};
+var FLABEL={fYear:"السنة",fDomain:"المجال",fSub:"الفئة الفرعية",fConf:"درجة الثقة",fQ:"بحث"};
+
+function chips(){
+  var box=document.getElementById("fchips"); if(!box)return;
+  var on=[];
+  FIDS.concat(["fQ"]).forEach(function(id){
+    var v=(document.getElementById(id).value||"").trim();
+    if(v) on.push(FLABEL[id]+": "+v);
+  });
+  box.innerHTML = on.length
+    ? '<span>الفلاتر النشطة</span>'+on.map(function(t){return '<span class="fchip">'+t+'</span>';}).join("")
+    : '<span>لا فلاتر نشطة · تُعرض كل السجلات</span>';
+}
+function refresh(){var rows=current();renderTable(rows);renderDesc(rows);chips();}
+function setState(obj){
+  FIDS.forEach(function(id){document.getElementById(id).value=obj[id]||"";});
+  document.getElementById("fQ").value=obj.fQ||"";
+  refresh();
+}
+FIDS.forEach(function(id){document.getElementById(id).addEventListener("change",refresh);});
+document.getElementById("fQ").addEventListener("input",refresh);
+document.getElementById("fQ").addEventListener("keydown",function(e){
+  if(e.key==="Escape"){this.value="";refresh();}
+});
+document.getElementById("reset").addEventListener("click",function(){setState(DEFAULTS);
+rqToast("أُعيدت الفلاتر إلى الحالة الأولى");});
+document.getElementById("showAll").addEventListener("click",function(){
+  setState({fYear:"",fDomain:"",fSub:"",fConf:"",fQ:""});rqToast("عُرضت كل السجلات دون تصفية");});
+document.getElementById("prnt").addEventListener("click",function(){window.print();});
+document.getElementById("expCsv").addEventListener("click",function(){
+  var t=document.querySelector("#rq table.ledger"); if(!t){rqToast("لا يوجد جدول للتصدير");return;}
+  var lines=["\ufeffملحق التحليل الإحصائي · جمعية البر الأهلية بالرياض"];
+  var on=[];FIDS.concat(["fQ"]).forEach(function(id){var v=(document.getElementById(id).value||"").trim();if(v)on.push(FLABEL[id]+"="+v);});
+  lines.push("الفلاتر المطبقة: "+(on.length?on.join(" · "):"لا يوجد"));
+  lines.push("");
+  Array.prototype.forEach.call(t.querySelectorAll("tr"),function(tr){
+    var cells=[];
+    Array.prototype.forEach.call(tr.querySelectorAll("th,td"),function(c){
+      cells.push('"'+c.textContent.replace(/\s+/g," ").trim().replace(/"/g,'""')+'"');});
+    if(cells.length)lines.push(cells.join(","));
+  });
+  try{
+    var blob=new Blob([lines.join("\r\n")],{type:"text/csv;charset=utf-8;"});
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);
+    a.download="ملحق_التحليل_الإحصائي.csv";
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    rqToast("تم تصدير "+(t.querySelectorAll("tbody tr").length)+" سجلاً بصيغة CSV");
+  }catch(e){rqToast("تعذّر التصدير في هذا المتصفح");}
+});
+function rqToast(msg){
+  var t=document.getElementById("rq-toast");
+  if(!t){t=document.createElement("div");t.id="rq-toast";t.className="rq-toast";document.body.appendChild(t);}
+  t.textContent=msg;t.classList.add("on");
+  clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove("on");},2400);
+}
+setState(DEFAULTS);
+ if(RQ_NOCHART){
+   var _w=document.createElement("div");_w.className="cdnwarn";
+   _w.textContent="تعذّر تحميل مكتبة الرسوم البيانية · الاتصال بالإنترنت مطلوب لعرض المخططات. الجداول والمقاييس الإحصائية والفلاتر تعمل بشكل طبيعي.";
+   var _r=document.querySelector("#rq .rail")||document.querySelector(".rail");
+   if(_r&&_r.parentNode)_r.parentNode.insertBefore(_w,_r.nextSibling);
+ }
+
+
+
+if(typeof Chart==="undefined"){
+  var _s=document.createElement("script");
+  _s.src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js";
+  _s.onerror=function(){
+    var w=document.createElement("div");w.className="cdnwarn";
+    w.textContent="تعذّر تحميل مكتبة الرسوم البيانية · الاتصال بالإنترنت مطلوب لعرض المخططات. الجداول والمقاييس الإحصائية تعمل بشكل طبيعي.";
+    var r=document.querySelector("#rq .rail"); if(r&&r.parentNode)r.parentNode.insertBefore(w,r.nextSibling); else document.body.appendChild(w);
+  };
+  document.head.appendChild(_s);
+}
+
+
+(function(){
+  var nav=document.getElementById("mainNav"); if(!nav)return;
+  var btns=Array.prototype.slice.call(nav.querySelectorAll(".nbtn"));
+  function topH(){var t=document.querySelector("#rq .top");return t?t.getBoundingClientRect().height:56;}
+  function goTo(id){
+    var el=document.getElementById(id); if(!el)return;
+    var y=el.getBoundingClientRect().top+window.pageYOffset-topH()-10;
+    try{window.scrollTo({top:y,behavior:"smooth"});}catch(e){window.scrollTo(0,y);}
+    mark(id);
+  }
+  function mark(id){btns.forEach(function(b){b.classList.toggle("on",b.getAttribute("data-go")===id);});}
+  btns.forEach(function(b){
+    b.addEventListener("click",function(ev){ev.preventDefault();goTo(b.getAttribute("data-go"));});
+  });
+  function onScroll(){
+    var best=null,bt=1e9,off=topH()+40;
+    btns.forEach(function(b){
+      var el=document.getElementById(b.getAttribute("data-go")); if(!el)return;
+      var d=Math.abs(el.getBoundingClientRect().top-off);
+      if(el.getBoundingClientRect().top-off<=0 && d<bt){bt=d;best=b.getAttribute("data-go");}
+    });
+    if(best)mark(best);
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});
+  onScroll();
+})();
+  
+
+
+
+(function(){
+  var top=document.querySelector("#rq .top");
+  function setH(){
+    if(!top)return;
+    var h=Math.round(top.getBoundingClientRect().height);
+    document.getElementById("rq").style.setProperty("--hdr",h+"px");
+  }
+  setH();
+  window.addEventListener("resize",setH);
+  window.addEventListener("orientationchange",function(){setTimeout(setH,120);});
+  if(window.ResizeObserver&&top){try{new ResizeObserver(setH).observe(top);}catch(e){}}
+})();
+  
+  }catch(e){
+    var msg=(e&&e.message)?e.message:String(e);
+    var st=(e&&e.stack)?String(e.stack).split("\n").slice(0,3).join(" | "):"";
+    if(window.console&&console.error) console.error("rq",e);
+    var d=document.createElement("div");
+    d.style.cssText="background:#FEF2F2;color:#991B1B;border:1px solid #FECACA;border-radius:7px;padding:10px 13px;font-size:11.5px;margin:8px 12px;line-height:1.8;direction:rtl;text-align:right";
+    d.innerHTML="<b>توقّف بناء شاشة التحليلات عند خطأ:</b><br><span style='font-family:monospace;direction:ltr;display:inline-block'>"+msg+"</span><br><span style='color:#7F1D1D;font-size:10px;font-family:monospace;direction:ltr;display:inline-block'>"+st+"</span>";
+    var rq=document.getElementById("rq");
+    if(rq) rq.insertBefore(d,rq.firstChild);
+  }
+}
+PAGES.real='تحليل الأرقام المعلنة في تقارير الجمعية';
+IDS.push('real');
+SRCMAP.real=['real','أرقام حقيقية مستخرجة من التقريرين السنويين 2023 و2025'];
+</script>
+<script>
+PAGES.decl='بيان مصادر البيانات';
+IDS.push('decl');
+SRCMAP.decl=['real','وثيقة تصنيف المصادر · مرجع ملزم لكل الشاشات'];
+function bDecl(){
+  var th=document.getElementById('dc2-th'); th.innerHTML='';
+  th.appendChild(mkTh(['الشاشة','درجة البيانات','مصدرها']));
+  var rows=[
+   ['تحليل الأرقام المعلنة','حقيقي','التقريران السنويان 2023 و2025'],
+   ['بيان مصادر البيانات','حقيقي','هذه الوثيقة'],
+   ['خارطة الطريق وتتبّع التنفيذ','هدف معلن','خطة التنفيذ والميزانية المعتمدة'],
+   ['سجل القرارات التنفيذية','هدف معلن','مشتقة من نتائج التحليل'],
+   ['مؤشر النضج الرقمي','هدف معلن','تقييم النضج في وثيقة الاستراتيجية'],
+   ['الحوكمة والامتثال','هدف معلن','متطلبات PDPL وخطة إدارة التغيير'],
+   ['التكامل مع المنصات الوطنية','هدف معلن','خريطة التكامل في الاستراتيجية'],
+   ['إدارة المخاطر · أهداف SMART · حاسبة العائد · مؤشرات الأداء','هدف معلن','وثيقة الاستراتيجية وميزانيتها'],
+   ['قبل وبعد التحول','مختلط: حقيقي وهدف وتقدير','كل صف موسوم بمصدره داخل الشاشة'],
+   ['لوحة القيادة · طلبات المستفيدين · الفروع · CRM · المتطوعون','محاكاة','مجموعة الخمسمئة سجل'],
+   ['لوحة التحليل الإحصائي · خريطة الفروع · مراحل تحليل البيانات','محاكاة','مجموعة الخمسمئة سجل'],
+   ['الموجز الصباحي','محاكاة','موجز آلي مبني على بيانات الشاشات'],
+   ['نماذج AI · لوحة IoT · الأثر المبكر','مقترح لم يُنفَّذ','أنظمة وأجهزة لم تُركَّب بعد']];
+  var col={'حقيقي':'#1A7A4A','هدف معلن':'#9C7C33','محاكاة':'#B4553F','مقترح لم يُنفَّذ':'#5E7A85'};
+  var tb=document.getElementById('dc2-tb'); tb.innerHTML='';
+  rows.forEach(function(r,i){
+    var tr=document.createElement('tr');
+    var c=col[r[1]]||'#5E7A85';
+    tr.innerHTML='<td style="text-align:right;font-weight:600;color:#123A4D">'+r[0]+'</td>'+
+      '<td><span style="display:inline-block;font-size:9.5px;font-weight:700;padding:2px 9px;border-radius:20px;background:'+c+';color:#fff">'+r[1]+'</span></td>'+
+      '<td style="text-align:right;color:#5E7A85;font-size:10.5px">'+r[2]+'</td>';
+    tb.appendChild(tr);
+  });
+  var ch=document.getElementById('cv-th'); ch.innerHTML='';
+  ch.appendChild(mkTh(['التحفّظ','الدرجة','الأثر على التحليل','المعالجة المتّبعة']));
+  var cv=[['تعارض عدد الفروع: التقرير السنوي يذكر عشرة والموقع الرسمي يعرض سبعة','تحفّظ',
+           'يمسّ كل مقارنة بين الفروع وكل توزيع جغرافي','اعتُمد العدد المنشور في الموقع وأُعلن التعارض صراحةً'],
+          ['مطابقة فئات المستفيدين لعام 2025 بأسمائها','تقديرية',
+           'يمسّ تحليل التركيبة لا المجاميع','أُعلنت كتقديرية ولم تُبنَ عليها نتيجة حاكمة'],
+          ['تعذّر استخراج تقارير أعوام 2019 إلى 2022 و2024 لأنها صور ممسوحة','قيد',
+           'تعذّر بناء سلسلة زمنية متصلة فاقتُصر على مقارنة سنتين','أُعلن القيد وصار توصيةً بسياسة نشر بيانات قابلة للقراءة الآلية']];
+  var cb=document.getElementById('cv-tb'); cb.innerHTML='';
+  cv.forEach(function(r){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td style="text-align:right;font-weight:600;color:#123A4D">'+r[0]+'</td>'+
+      '<td><span class="st run">'+r[1]+'</span></td>'+
+      '<td style="text-align:right;font-size:10.5px">'+r[2]+'</td>'+
+      '<td style="text-align:right;color:#5E7A85;font-size:10.5px">'+r[3]+'</td>';
+    cb.appendChild(tr);
+  });
 }
 </script>
 </body>
