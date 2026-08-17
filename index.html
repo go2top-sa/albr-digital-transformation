@@ -2827,10 +2827,11 @@ function bGov(){
   var lateN=P.filter(function(x){return x[2]==='late';}).length;
   var doneN=P.filter(function(x){return x[2]==='done';}).length;
   var mfa=P.filter(function(x){return x[0].indexOf('MFA')>=0;})[0];
+  var mfaV=mfa?mfa[3]:'—';
   document.getElementById('gv-k').innerHTML=[
    ['نسبة الامتثال لـ PDPL',comp.toFixed(0)+'%','المستهدف 90% خلال 6 أشهر',comp>=90?'up':'dn'],
    ['بنود مكتملة',doneN+' من '+P.length,lateN+' بند متأخر',lateN?'dn':'up'],
-   ['تغطية التحقق المتعدد MFA',mfa[3]+'%','5 فروع من 7','nt'],
+   ['تغطية التحقق المتعدد MFA',mfaV+'%','5 فروع من 7','nt'],
    ['تقييمات أثر الخصوصية DPIA','1 من 3','متبقٍ: Odoo ومنصة جود','dn']
   ].map(function(k){return '<div class="kc"><div class="kl">'+k[0]+'</div><div class="kv">'+k[1]+'</div><div class="kd '+k[3]+'">'+k[2]+'</div></div>';}).join('');
 
@@ -2890,7 +2891,7 @@ function bNat(){
    ['منصات مستهدفة',N.length,'إشراك · نافع · بيان · نفاذ · أبشر','nt'],
    ['منصات مربوطة بالكامل',done+' من 4','الهدف السادس: ربط 4 منصات',done?'up':'dn'],
    ['متوسط الاكتمال',avg.toFixed(0)+'%','الموعد المستهدف: الشهر 24','dn'],
-   ['المنصة التالية',next[0],'مستهدفة في الشهر '+next[6],'nt']
+   ['المنصة التالية',next?next[0]:'—',next?('مستهدفة في الشهر '+next[6]):'كل المنصات مكتملة','nt']
   ].map(function(k){return '<div class="kc"><div class="kl">'+k[0]+'</div><div class="kv">'+k[1]+'</div><div class="kd '+k[3]+'">'+k[2]+'</div></div>';}).join('');
 
   var g=document.getElementById('nt-g');g.innerHTML='';
